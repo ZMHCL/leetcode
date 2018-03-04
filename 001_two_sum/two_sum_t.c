@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct object {
+struct object 
+{
     int val;
     int index;
 };
@@ -14,8 +15,9 @@ static int compare(const void *a, const void *b)
 static int * twosum(int *nums, int numsSize, int target)
 {
     int i, j;
-    struct object *objs = malloc(numsSize * sizeof(*objs));
-    for (i = 0; i < numsSize; i++) {
+    struct object *objs = (struct object *) malloc(numsSize * sizeof(*objs));
+    for (i = 0; i < numsSize; i++) 
+    {
         objs[i].val = nums[i];
         objs[i].index = i;
     }
